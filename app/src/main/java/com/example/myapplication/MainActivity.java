@@ -47,9 +47,16 @@ public class MainActivity extends AppCompatActivity {
         String alert ="";
 
         if (st > 25) {
-            alert = String.valueOf("");
+            alert = String.valueOf("You are too heavy!!!!!!!");
+            getWindow().setBackgroundDrawableResource(R.drawable.dogsurprised);
         }
+       else  if (st < 18.5) {
+            alert = String.valueOf("You are too slim!");
+            getWindow().setBackgroundDrawableResource(R.drawable.dog_cry);
     }
-
+        else    {
+            alert = String.valueOf("Your body is good !");
+        }
+return alert;
 
 }
